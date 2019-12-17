@@ -4,10 +4,10 @@ steps:
     displayName: 'GitHub Release'
     inputs:
       action: 'create'
-      title: '$(ReleasePrefix) $(DisplayVersion)'
+      title: 'yuzu-early-access $(DisplayVersion)'
       assets: '$(Build.ArtifactStagingDirectory)/*'
-      gitHubConnection: $(GitHubReleaseConnectionName)
-      repositoryName: '$(Build.Repository.Name)'
+      gitHubConnection: 'github.com_kiku233'
+      repositoryName: 'kiku233/yuzu-early-access'
       target: '$(Build.SourceVersion)'
       tagSource: manual
-      tag: $(BuildName)-$(DisplayPrefix)-$(DisplayVersion)
+      tag: mainline-0-$(DisplayVersion)

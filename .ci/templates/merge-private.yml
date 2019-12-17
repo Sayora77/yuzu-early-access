@@ -6,7 +6,7 @@ jobs:
     submodules: recursive
   - template: ./mergebot-private.yml
     parameters:
-      matchLabel: '$(BuildName)-merge'
+      matchLabel: 'mainline-merge'
       matchLabelPublic: '$(PublicBuildName)-merge'
   - task: ArchiveFiles@2
     displayName: 'Package Source'
@@ -14,12 +14,12 @@ jobs:
       rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
       includeRootFolder: false
       archiveType: '7z'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/yuzu-$(BuildName)-source.7z'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/yuzu-mainline-source.7z'
   - task: PublishPipelineArtifact@1
     displayName: 'Upload Artifacts'
     inputs:
-      targetPath: '$(Build.ArtifactStagingDirectory)/yuzu-$(BuildName)-source.7z'
-      artifact: 'yuzu-$(BuildName)-source'
+      targetPath: '$(Build.ArtifactStagingDirectory)/yuzu-mainline-source.7z'
+      artifact: 'yuzu-mainline-source'
       replaceExistingArchive: true
 - job: upload_source
   displayName: 'upload'

@@ -5,6 +5,6 @@ steps:
     inputs:
       command: publish
       publishDirectory: '$(Build.ArtifactStagingDirectory)'
-      vstsFeedPublish: 'yuzu-$(BuildName)'
+      vstsFeedPublish: 'yuzu-mainline'
       vstsFeedPackagePublish: 'main'
       packagePublishDescription: 'Yuzu Windows and Linux Executable Packages'

@@ -11,13 +11,13 @@ steps:
 - task: CacheBeta@0
   displayName: 'Cache Build System'
   inputs:
-    key: yuzu-v1-$(BuildName)-$(BuildSuffix)-$(CacheSuffix)
+    key: yuzu-v1-mainline-$(BuildSuffix)-$(CacheSuffix)
     path: $(System.DefaultWorkingDirectory)/ccache
     cacheHitVar: CACHE_RESTORED
 - script: chmod a+x ./.ci/scripts/$(ScriptFolder)/exec.sh && ./.ci/scripts/$(ScriptFolder)/exec.sh ${{ parameters['version'] }}
   displayName: 'Build'
-- script: chmod a+x ./.ci/scripts/$(ScriptFolder)/upload.sh && RELEASE_NAME=$(BuildName) ./.ci/scripts/$(ScriptFolder)/upload.sh
+- script: chmod a+x ./.ci/scripts/$(ScriptFolder)/upload.sh && RELEASE_NAME=mainline ./.ci/scripts/$(ScriptFolder)/upload.sh
   displayName: 'Package Artifacts'
 - publish: artifacts
-  artifact: 'yuzu-$(BuildName)-$(BuildSuffix)'
+  artifact: 'yuzu-mainline-$(BuildSuffix)'
   displayName: 'Upload Artifacts'
