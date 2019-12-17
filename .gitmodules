@@ -45,7 +45,7 @@
     url = https://github.com/facebook/zstd
 [submodule "sirit"]
     path = externals/sirit
-    url = https://github.com/ReinUsesLisp/sirit
+    url = https://github.com/kiku233/sirit
 [submodule "libzip"]
     path = externals/libzip/libzip
     url = https://github.com/nih-at/libzip.git
