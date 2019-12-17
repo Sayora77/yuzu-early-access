@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2016 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -72,15 +76,15 @@ void DualJoyconsDockedOnProfileSelect() {
 using InputProfile = std::tuple<const char*, void (*)(), void (*)(ConfigureInputSimple*)>;
 
 constexpr std::array<InputProfile, 3> INPUT_PROFILES{{
-    {QT_TR_NOOP("Single Player - Handheld - Undocked"), HandheldOnProfileSelect,
+    {QT_TR_NOOP("单人游戏 - 手持式 - Undocked"), HandheldOnProfileSelect,
      [](ConfigureInputSimple* caller) {
          CallConfigureDialog<ConfigureInputPlayer>(caller, HANDHELD_INDEX, false);
      }},
-    {QT_TR_NOOP("Single Player - Dual Joycons - Docked"), DualJoyconsDockedOnProfileSelect,
+    {QT_TR_NOOP("单人游戏 - 双 Joycons - Docked"), DualJoyconsDockedOnProfileSelect,
      [](ConfigureInputSimple* caller) {
          CallConfigureDialog<ConfigureInputPlayer>(caller, 1, false);
      }},
-    {QT_TR_NOOP("Custom"), [] {}, CallConfigureDialog<ConfigureInput>},
+    {QT_TR_NOOP("定制"), [] {}, CallConfigureDialog<ConfigureInput>},
 }};
 
 } // namespace

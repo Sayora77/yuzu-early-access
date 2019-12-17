@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2018 yuzu Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -76,7 +80,7 @@ void ConfigureAudio::SetAudioDeviceFromDeviceID() {
 }
 
 void ConfigureAudio::SetVolumeIndicatorText(int percentage) {
-    ui->volume_indicator->setText(tr("%1%", "Volume percentage (e.g. 50%)").arg(percentage));
+    ui->volume_indicator->setText(tr("%1%", "体积百分比 (e.g. 50%)").arg(percentage));
 }
 
 void ConfigureAudio::ApplyConfiguration() {

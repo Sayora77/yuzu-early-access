@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2019 yuzu Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -19,7 +23,7 @@ QtErrorDisplay::~QtErrorDisplay() = default;
 void QtErrorDisplay::ShowError(ResultCode error, std::function<void()> finished) const {
     this->callback = std::move(finished);
     emit MainWindowDisplayError(
-        tr("An error has occured.\nPlease try again or contact the developer of the "
+        tr("出现错误.\n请重试或联系的开发商 "
            "software.\n\nError Code: %1-%2 (0x%3)")
             .arg(static_cast<u32>(error.module.Value()) + 2000, 4, 10, QChar::fromLatin1('0'))
             .arg(error.description, 4, 10, QChar::fromLatin1('0'))
@@ -32,7 +36,7 @@ void QtErrorDisplay::ShowErrorWithTimestamp(ResultCode error, std::chrono::secon
 
     const QDateTime date_time = QDateTime::fromSecsSinceEpoch(time.count());
     emit MainWindowDisplayError(
-        tr("An error occured on %1 at %2.\nPlease try again or contact the "
+        tr("An error occured on %1 at %2.\n请重试或联系 "
            "developer of the software.\n\nError Code: %3-%4 (0x%5)")
             .arg(date_time.toString(QStringLiteral("dddd, MMMM d, yyyy")))
             .arg(date_time.toString(QStringLiteral("h:mm:ss A")))
@@ -46,7 +50,7 @@ void QtErrorDisplay::ShowCustomErrorText(ResultCode error, std::string dialog_te
                                          std::function<void()> finished) const {
     this->callback = std::move(finished);
     emit MainWindowDisplayError(
-        tr("An error has occured.\nError Code: %1-%2 (0x%3)\n\n%4\n\n%5")
+        tr("发生了错误.\n错误代码: %1-%2 (0x%3)\n\n%4\n\n%5")
             .arg(static_cast<u32>(error.module.Value()) + 2000, 4, 10, QChar::fromLatin1('0'))
             .arg(error.description, 4, 10, QChar::fromLatin1('0'))
             .arg(error.raw, 8, 16, QChar::fromLatin1('0'))

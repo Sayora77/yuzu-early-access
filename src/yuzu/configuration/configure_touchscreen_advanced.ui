@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Configure Touchscreen</string>
+   <string>配置触摸屏</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -23,7 +23,7 @@
       </size>
      </property>
      <property name="text">
-      <string>Warning: The settings in this page affect the inner workings of yuzu's emulated touchscreen. Changing them may result in undesirable behavior, such as the touchscreen partially or not working. You should only use this page if you know what you are doing.</string>
+      <string>警告：本页面的设置会影响柚子的内部运作模拟真实触摸屏。改变它们可能会导致不希望的行为，如触摸屏部分或不工作。如果你知道你在做什么时，才应使用此页.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -49,7 +49,7 @@
    <item>
     <widget class="QGroupBox" name="gridGroupBox">
      <property name="title">
-      <string>Touch Parameters</string>
+      <string>触控参数</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
@@ -68,14 +68,14 @@
       <item row="2" column="1">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>Touch Diameter Y</string>
+         <string>触摸直径 Y</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Finger</string>
+         <string>手指</string>
         </property>
        </widget>
       </item>
@@ -95,7 +95,7 @@
       <item row="1" column="1">
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>Touch Diameter X</string>
+         <string>触摸直径 X</string>
         </property>
        </widget>
       </item>
@@ -112,7 +112,7 @@
       <item row="3" column="1">
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>Rotational Angle</string>
+         <string>旋转角度</string>
         </property>
        </widget>
       </item>
@@ -146,7 +146,7 @@
      <item>
       <widget class="QPushButton" name="restore_defaults_button">
        <property name="text">
-        <string>Restore Defaults</string>
+        <string>恢复默认值</string>
        </property>
       </widget>
      </item>

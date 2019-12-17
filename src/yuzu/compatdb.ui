@@ -17,14 +17,14 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Report Compatibility</string>
+   <string>报告兼容性</string>
   </property>
   <property name="options">
    <set>QWizard::DisabledBackButtonOnLastPage|QWizard::HelpButtonOnRight|QWizard::NoBackButtonOnStartPage</set>
   </property>
   <widget class="QWizardPage" name="wizard_Info">
    <property name="title">
-    <string>Report Game Compatibility</string>
+    <string>报告游戏兼容性</string>
    </property>
    <attribute name="pageId">
     <string notr="true">0</string>
@@ -33,7 +33,7 @@
     <item>
      <widget class="QLabel" name="lbl_Spiel">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Should you choose to submit a test case to the &lt;/span&gt;&lt;a href=&quot;https://yuzu-emu.org/game/&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;yuzu Compatibility List&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, The following information will be collected and displayed on the site:&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Hardware Information (CPU / GPU / Operating System)&lt;/li&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Which version of yuzu you are running&lt;/li&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The connected yuzu account&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;如果您选择一个测试用例提交 &lt;/span&gt;&lt;a href=&quot;https://yuzu-emu.org/game/&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;yuzu 游戏兼容性列表&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;, 下面的信息将被收集并显示在网站上:&lt;/span&gt;&lt;/p&gt;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;硬件信息 (CPU / GPU / Operating System)&lt;/li&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;哪个版本的 yuzu 的你正在运行&lt;/li&gt;&lt;li style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;该连接 yuzu 帐户&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -60,7 +60,7 @@
   </widget>
   <widget class="QWizardPage" name="wizard_Report">
    <property name="title">
-    <string>Report Game Compatibility</string>
+    <string>报告游戏兼容性</string>
    </property>
    <attribute name="pageId">
     <string notr="true">1</string>
@@ -69,14 +69,14 @@
     <item row="2" column="0">
      <widget class="QRadioButton" name="radioButton_Perfect">
       <property name="text">
-       <string>Perfect</string>
+       <string>完美</string>
       </property>
      </widget>
     </item>
     <item row="2" column="1">
      <widget class="QLabel" name="lbl_Perfect">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Game functions flawlessly with no audio or graphical glitches.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;没有音频或故障的图形游戏功能完美.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -86,14 +86,14 @@
     <item row="4" column="0">
      <widget class="QRadioButton" name="radioButton_Great">
       <property name="text">
-       <string>Great </string>
+       <string>很好</string>
       </property>
      </widget>
     </item>
     <item row="4" column="1">
      <widget class="QLabel" name="lbl_Great">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Game functions with minor graphical or audio glitches and is playable from start to finish. May require some workarounds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;轻微的图形或音频故障的游戏功能，可播放从开始到结束。可能需要一些解决方法.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -103,14 +103,14 @@
     <item row="5" column="0">
      <widget class="QRadioButton" name="radioButton_Okay">
       <property name="text">
-       <string>Okay</string>
+       <string>好的</string>
       </property>
      </widget>
     </item>
     <item row="5" column="1">
      <widget class="QLabel" name="lbl_Okay">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Game functions with major graphical or audio glitches, but game is playable from start to finish with workarounds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;与主要的图形或音频故障，但游戏的游戏功能是从开始可玩与变通方法来完成。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -120,14 +120,14 @@
     <item row="6" column="0">
      <widget class="QRadioButton" name="radioButton_Bad">
       <property name="text">
-       <string>Bad</string>
+       <string>坏</string>
       </property>
      </widget>
     </item>
     <item row="6" column="1">
      <widget class="QLabel" name="lbl_Bad">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Game functions, but with major graphical or audio glitches. Unable to progress in specific areas due to glitches even with workarounds.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;游戏功能，但主要的图形或音频故障。无法在特定领域取得的进展，由于即使有解决方法的毛刺。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -137,14 +137,14 @@
     <item row="7" column="0">
      <widget class="QRadioButton" name="radioButton_IntroMenu">
       <property name="text">
-       <string>Intro/Menu</string>
+       <string>简介/菜单</string>
       </property>
      </widget>
     </item>
     <item row="7" column="1">
      <widget class="QLabel" name="lbl_IntroMenu">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Game is completely unplayable due to major graphical or audio glitches. Unable to progress past the Start Screen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;游戏是完全无法播放，由于主要的图形或音频故障。过去无法启动画面进步.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -154,7 +154,7 @@
     <item row="8" column="0">
      <widget class="QRadioButton" name="radioButton_WontBoot">
       <property name="text">
-       <string>Won't Boot</string>
+       <string>无法启动</string>
       </property>
       <property name="checkable">
        <bool>true</bool>
@@ -167,7 +167,7 @@
     <item row="8" column="1">
      <widget class="QLabel" name="lbl_WontBoot">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The game crashes when attempting to startup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;尝试启动游戏时崩溃.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
@@ -179,7 +179,7 @@
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Independent of speed or performance, how well does this game play from start to finish on this version of yuzu?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;独立的速度或性能的，如何做，从开始玩这个游戏来完成这个版本的yuzu?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -203,7 +203,7 @@
   </widget>
   <widget class="QWizardPage" name="wizard_ThankYou">
    <property name="title">
-    <string>Thank you for your submission!</string>
+    <string>感谢您提交!</string>
    </property>
    <attribute name="pageId">
     <string notr="true">2</string>

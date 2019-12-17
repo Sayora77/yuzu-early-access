@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2016 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -159,8 +163,8 @@ void ConfigureInput::RetranslateControllerComboBoxes() {
         [[maybe_unused]] const QSignalBlocker blocker(controller_box);
 
         controller_box->clear();
-        controller_box->addItems({tr("None"), tr("Pro Controller"), tr("Dual Joycons"),
-                                  tr("Single Right Joycon"), tr("Single Left Joycon")});
+        controller_box->addItems({tr("无"), tr("Pro Controller"), tr("Dual Joycons"),
+                                  tr("右单 Joycon"), tr("左单 Joycon")});
     }
 
     LoadPlayerControllerIndices();

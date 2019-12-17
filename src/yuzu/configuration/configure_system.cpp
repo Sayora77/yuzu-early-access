@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2016 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -100,10 +104,10 @@ void ConfigureSystem::ApplyConfiguration() {
 
 void ConfigureSystem::RefreshConsoleID() {
     QMessageBox::StandardButton reply;
-    QString warning_text = tr("This will replace your current virtual Switch with a new one. "
-                              "Your current virtual Switch will not be recoverable. "
-                              "This might have unexpected effects in games. This might fail, "
-                              "if you use an outdated config savegame. Continue?");
+    QString warning_text = tr("这将有一个新的您当前的虚拟交换机将"
+                              "无法恢复，这可能在游戏意想不到的"
+                              "效果替换当前的虚拟交换机。如果您使用"
+                              "的是过时的配置秘技这可能会失败，继续?");
     reply = QMessageBox::critical(this, tr("Warning"), warning_text,
                                   QMessageBox::No | QMessageBox::Yes);
     if (reply == QMessageBox::No) {

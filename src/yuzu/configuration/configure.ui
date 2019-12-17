@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>yuzu Configuration</string>
+   <string>yuzu 配置</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -45,62 +45,62 @@
        </property>
        <widget class="ConfigureGeneral" name="generalTab">
         <attribute name="title">
-         <string>General</string>
+         <string>常规</string>
         </attribute>
        </widget>
        <widget class="ConfigureGameList" name="gameListTab">
         <attribute name="title">
-         <string>Game List</string>
+         <string>游戏列表</string>
         </attribute>
        </widget>
        <widget class="ConfigureSystem" name="systemTab">
         <attribute name="title">
-         <string>System</string>
+         <string>系统</string>
         </attribute>
        </widget>
        <widget class="ConfigureProfileManager" name="profileManagerTab">
         <attribute name="title">
-         <string>Profiles</string>
+         <string>简介</string>
         </attribute>
        </widget>
        <widget class="ConfigureFilesystem" name="filesystemTab">
         <attribute name="title">
-         <string>Filesystem</string>
+         <string>文件系统</string>
         </attribute>
        </widget>
        <widget class="ConfigureInputSimple" name="inputTab">
         <attribute name="title">
-         <string>Input</string>
+         <string>输入</string>
         </attribute>
        </widget>
        <widget class="ConfigureHotkeys" name="hotkeysTab">
         <attribute name="title">
-         <string>Hotkeys</string>
+         <string>热键</string>
         </attribute>
        </widget>
        <widget class="ConfigureGraphics" name="graphicsTab">
         <attribute name="title">
-         <string>Graphics</string>
+         <string>图形</string>
         </attribute>
        </widget>
        <widget class="ConfigureAudio" name="audioTab">
         <attribute name="title">
-         <string>Audio</string>
+         <string>音频</string>
         </attribute>
        </widget>
        <widget class="ConfigureDebug" name="debugTab">
         <attribute name="title">
-         <string>Debug</string>
+         <string>调试</string>
         </attribute>
        </widget>
        <widget class="ConfigureWeb" name="webTab">
         <attribute name="title">
-         <string>Web</string>
+         <string>网络</string>
         </attribute>
        </widget>
        <widget class="ConfigureService" name="serviceTab">
         <attribute name="title">
-         <string>Services</string>
+         <string>服务</string>
         </attribute>
        </widget>
       </widget>

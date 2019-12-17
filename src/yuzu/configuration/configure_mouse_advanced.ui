@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Configure Mouse</string>
+   <string>配置鼠标</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="gridGroupBox">
      <property name="title">
-      <string>Mouse Buttons</string>
+      <string>鼠标按钮</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="4">
@@ -43,7 +43,7 @@
           <item>
            <widget class="QLabel" name="label_3">
             <property name="text">
-             <string>Right:</string>
+             <string>右:</string>
             </property>
            </widget>
           </item>
@@ -87,7 +87,7 @@
           <item>
            <widget class="QLabel" name="label_2">
             <property name="text">
-             <string>Middle:</string>
+             <string>中:</string>
             </property>
            </widget>
           </item>
@@ -115,7 +115,7 @@
              </size>
             </property>
             <property name="text">
-             <string>Back:</string>
+             <string>后:</string>
             </property>
            </widget>
           </item>
@@ -137,7 +137,7 @@
           <item>
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>Left:</string>
+             <string>左:</string>
             </property>
            </widget>
           </item>
@@ -165,7 +165,7 @@
           <item>
            <widget class="QLabel" name="label_5">
             <property name="text">
-             <string>Forward:</string>
+             <string>前:</string>
             </property>
            </widget>
           </item>
@@ -188,14 +188,14 @@
      <item>
       <widget class="QPushButton" name="buttonClearAll">
        <property name="text">
-        <string>Clear All</string>
+        <string>全部清除</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="buttonRestoreDefaults">
        <property name="text">
-        <string>Restore Defaults</string>
+        <string>恢复默认值</string>
        </property>
       </widget>
      </item>

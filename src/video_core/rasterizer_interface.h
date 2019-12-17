@@ -79,4 +79,5 @@ public:
     virtual void LoadDiskResources(const std::atomic_bool& stop_loading = false,
                                    const DiskResourceLoadCallback& callback = {}) {}
 };
+
 } // namespace VideoCore

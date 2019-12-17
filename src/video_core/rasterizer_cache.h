@@ -108,7 +108,8 @@ public:
         std::lock_guard lock{mutex};
 
         while (interval_cache.begin() != interval_cache.end()) {
-            Unregister(*interval_cache.begin()->second.begin());
+            auto& object = *interval_cache.begin()->second.begin();
+            Unregister(object);
         }
     }
 

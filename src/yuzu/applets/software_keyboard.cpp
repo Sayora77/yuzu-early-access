@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2018 yuzu Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -56,7 +60,7 @@ QtSoftwareKeyboardDialog::QtSoftwareKeyboardDialog(
     header_label = new QLabel(QString::fromStdU16String(parameters.header_text));
     header_label->setFont({header_label->font().family(), 11, QFont::Bold});
     if (header_label->text().isEmpty())
-        header_label->setText(tr("Enter text:"));
+        header_label->setText(tr("输入文本:"));
 
     sub_label = new QLabel(QString::fromStdU16String(parameters.sub_text));
     sub_label->setFont({sub_label->font().family(), sub_label->font().pointSize(),
@@ -98,7 +102,7 @@ QtSoftwareKeyboardDialog::QtSoftwareKeyboardDialog(
     layout->addWidget(line_edit);
     layout->addWidget(buttons);
     setLayout(layout);
-    setWindowTitle(tr("Software Keyboard"));
+    setWindowTitle(tr("软件键盘"));
 }
 
 QtSoftwareKeyboardDialog::~QtSoftwareKeyboardDialog() = default;

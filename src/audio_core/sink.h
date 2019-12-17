@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2018 yuzu Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -12,7 +16,7 @@
 
 namespace AudioCore {
 
-constexpr char auto_device_name[] = "auto";
+constexpr char auto_device_name[] = "自动";
 
 /**
  * This class is an interface for an audio sink. An audio sink accepts samples in stereo signed

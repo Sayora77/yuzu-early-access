@@ -19,7 +19,7 @@
      <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>Storage Directories</string>
+        <string>存储目录</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="0">
@@ -45,7 +45,7 @@
         <item row="1" column="0">
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>SD Card</string>
+           <string>SD 卡</string>
           </property>
          </widget>
         </item>
@@ -78,13 +78,13 @@
      <item>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="title">
-        <string>Gamecard</string>
+        <string>游戏卡</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="2" column="1">
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>Path</string>
+           <string>路径</string>
           </property>
          </widget>
         </item>
@@ -94,14 +94,14 @@
         <item row="0" column="1">
          <widget class="QCheckBox" name="gamecard_inserted">
           <property name="text">
-           <string>Inserted</string>
+           <string>插入</string>
           </property>
          </widget>
         </item>
         <item row="1" column="1">
          <widget class="QCheckBox" name="gamecard_current_game">
           <property name="text">
-           <string>Current Game</string>
+           <string>目前游戏</string>
           </property>
          </widget>
         </item>
@@ -118,20 +118,20 @@
      <item>
       <widget class="QGroupBox" name="groupBox_3">
        <property name="title">
-        <string>Storage Sizes</string>
+        <string>存储大小</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="3" column="0">
          <widget class="QLabel" name="label_5">
           <property name="text">
-           <string>SD Card</string>
+           <string>SD 卡</string>
           </property>
          </widget>
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>System NAND</string>
+           <string>系统 NAND</string>
           </property>
          </widget>
         </item>
@@ -213,7 +213,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="label_6">
           <property name="text">
-           <string>User NAND</string>
+           <string>用户 NAND</string>
           </property>
          </widget>
         </item>
@@ -239,7 +239,7 @@
      <item>
       <widget class="QGroupBox" name="groupBox_4">
        <property name="title">
-        <string>Patch Manager</string>
+        <string>补丁管理器</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_4">
         <item row="1" column="2">
@@ -267,7 +267,7 @@
           <item>
            <widget class="QCheckBox" name="dump_nso">
             <property name="text">
-             <string>Dump Decompressed NSOs</string>
+             <string>Dump 解压 NSOs</string>
             </property>
            </widget>
           </item>
@@ -283,7 +283,7 @@
         <item row="1" column="0">
          <widget class="QLabel" name="label_9">
           <property name="text">
-           <string>Mod Load Root</string>
+           <string>Mod 加载目录</string>
           </property>
          </widget>
         </item>
@@ -316,13 +316,13 @@
      <item>
       <widget class="QGroupBox" name="groupBox_5">
        <property name="title">
-        <string>Caching</string>
+        <string>高速缓存</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="0" column="0">
          <widget class="QLabel" name="label_10">
           <property name="text">
-           <string>Cache Directory</string>
+           <string>缓存目录</string>
           </property>
          </widget>
         </item>
@@ -357,14 +357,14 @@
           <item>
            <widget class="QCheckBox" name="cache_game_list">
             <property name="text">
-             <string>Cache Game List Metadata</string>
+             <string>缓存游戏列表元</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="reset_game_list_cache">
             <property name="text">
-             <string>Reset Metadata Cache</string>
+             <string>重置元数据高速缓存</string>
             </property>
            </widget>
           </item>

@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2017 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -67,18 +71,18 @@ void ConfigureWeb::RetranslateUI() {
 
     ui->telemetry_learn_more->setText(
         tr("<a href='https://yuzu-emu.org/help/feature/telemetry/'><span style=\"text-decoration: "
-           "underline; color:#039be5;\">Learn more</span></a>"));
+           "underline; color:#039be5;\">学到更多</span></a>"));
 
     ui->web_signup_link->setText(
         tr("<a href='https://profile.yuzu-emu.org/'><span style=\"text-decoration: underline; "
-           "color:#039be5;\">Sign up</span></a>"));
+           "color:#039be5;\">注册</span></a>"));
 
     ui->web_token_info_link->setText(
         tr("<a href='https://yuzu-emu.org/wiki/yuzu-web-service/'><span style=\"text-decoration: "
-           "underline; color:#039be5;\">What is my token?</span></a>"));
+           "underline; color:#039be5;\">什么是我的令牌?</span></a>"));
 
     ui->label_telemetry_id->setText(
-        tr("Telemetry ID: 0x%1").arg(QString::number(Core::GetTelemetryId(), 16).toUpper()));
+        tr("遥测 ID: 0x%1").arg(QString::number(Core::GetTelemetryId(), 16).toUpper()));
 }
 
 void ConfigureWeb::SetConfiguration() {
@@ -89,7 +93,7 @@ void ConfigureWeb::SetConfiguration() {
     ui->web_token_info_link->setOpenExternalLinks(true);
 
     if (Settings::values.yuzu_username.empty()) {
-        ui->username->setText(tr("Unspecified"));
+        ui->username->setText(tr("不明"));
     } else {
         ui->username->setText(QString::fromStdString(Settings::values.yuzu_username));
     }
@@ -115,15 +119,15 @@ void ConfigureWeb::ApplyConfiguration() {
         Settings::values.yuzu_token = TokenFromDisplayToken(ui->edit_token->text().toStdString());
     } else {
         QMessageBox::warning(
-            this, tr("Token not verified"),
-            tr("Token was not verified. The change to your token has not been saved."));
+            this, tr("令牌未验证"),
+            tr("令牌未验证，你的令牌中的变化尚未保存."));
     }
 }
 
 void ConfigureWeb::RefreshTelemetryID() {
     const u64 new_telemetry_id{Core::RegenerateTelemetryId()};
     ui->label_telemetry_id->setText(
-        tr("Telemetry ID: 0x%1").arg(QString::number(new_telemetry_id, 16).toUpper()));
+        tr("遥测 ID: 0x%1").arg(QString::number(new_telemetry_id, 16).toUpper()));
 }
 
 void ConfigureWeb::OnLoginChanged() {
@@ -142,7 +146,7 @@ void ConfigureWeb::OnLoginChanged() {
 
 void ConfigureWeb::VerifyLogin() {
     ui->button_verify_login->setDisabled(true);
-    ui->button_verify_login->setText(tr("Verifying..."));
+    ui->button_verify_login->setText(tr("验证..."));
     verify_watcher.setFuture(QtConcurrent::run(
         [username = UsernameFromDisplayToken(ui->edit_token->text().toStdString()),
          token = TokenFromDisplayToken(ui->edit_token->text().toStdString())] {
@@ -152,7 +156,7 @@ void ConfigureWeb::VerifyLogin() {
 
 void ConfigureWeb::OnLoginVerified() {
     ui->button_verify_login->setEnabled(true);
-    ui->button_verify_login->setText(tr("Verify"));
+    ui->button_verify_login->setText(tr("校验"));
     if (verify_watcher.result()) {
         user_verified = true;
 
@@ -163,9 +167,9 @@ void ConfigureWeb::OnLoginVerified() {
     } else {
         const QPixmap pixmap = QIcon::fromTheme(QStringLiteral("failed")).pixmap(16);
         ui->label_token_verified->setPixmap(pixmap);
-        ui->username->setText(tr("Unspecified"));
-        QMessageBox::critical(this, tr("Verification failed"),
-                              tr("Verification failed. Check that you have entered your token "
-                                 "correctly, and that your internet connection is working."));
+        ui->username->setText(tr("不明"));
+        QMessageBox::critical(this, tr("验证失败"),
+                              tr("验证失败。请检查您输入您的正确的道理"
+                                 "那你的互联网连接是否正常."));
     }
 }

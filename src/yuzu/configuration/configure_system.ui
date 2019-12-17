@@ -19,111 +19,111 @@
      <item>
       <widget class="QGroupBox" name="group_system_settings">
        <property name="title">
-        <string>System Settings</string>
+        <string>系统设置</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="0">
          <widget class="QLabel" name="label_sound">
           <property name="text">
-           <string>Sound output mode</string>
+           <string>声音输出模式</string>
           </property>
          </widget>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_console_id">
           <property name="text">
-           <string>Console ID:</string>
+           <string>控制台 ID:</string>
           </property>
          </widget>
         </item>
         <item row="0" column="1">
          <widget class="QComboBox" name="combo_language">
           <property name="toolTip">
-           <string>Note: this can be overridden when region setting is auto-select</string>
+           <string>注：这可以被覆盖时区的设置为自动选择</string>
           </property>
           <item>
            <property name="text">
-            <string>Japanese (日本語)</string>
+            <string>日语 (日本語)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>English</string>
+            <string>英语</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>French (français)</string>
+            <string>法语 (français)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>German (Deutsch)</string>
+            <string>德语 (Deutsch)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Italian (italiano)</string>
+            <string>意大利语 (italiano)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Spanish (español)</string>
+            <string>西班牙语 (español)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Chinese</string>
+            <string>中文</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Korean (한국어)</string>
+            <string>韩语 (한국어)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Dutch (Nederlands)</string>
+            <string>荷兰语 (Nederlands)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Portuguese (português)</string>
+            <string>葡萄牙语 (português)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Russian (Русский)</string>
+            <string>俄语 (Русский)</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Taiwanese</string>
+            <string>台湾</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>British English</string>
+            <string>英式英语</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Canadian French</string>
+            <string>加拿大法语</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Latin American Spanish</string>
+            <string>拉丁美洲西班牙语</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Simplified Chinese</string>
+            <string>简体中文</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Traditional Chinese (正體中文)</string>
+            <string>繁体中文 (正體中文)</string>
            </property>
           </item>
          </widget>
@@ -131,7 +131,7 @@
         <item row="4" column="0">
          <widget class="QCheckBox" name="rng_seed_checkbox">
           <property name="text">
-           <string>RNG Seed</string>
+           <string>RNG 开端</string>
           </property>
          </widget>
         </item>
@@ -139,17 +139,17 @@
          <widget class="QComboBox" name="combo_sound">
           <item>
            <property name="text">
-            <string>Mono</string>
+            <string>单声道</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Stereo</string>
+            <string>立体声</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Surround</string>
+            <string>环绕</string>
            </property>
           </item>
          </widget>
@@ -157,7 +157,7 @@
         <item row="0" column="0">
          <widget class="QLabel" name="label_language">
           <property name="text">
-           <string>Language</string>
+           <string>语言</string>
           </property>
          </widget>
         </item>
@@ -173,14 +173,14 @@
            <enum>Qt::RightToLeft</enum>
           </property>
           <property name="text">
-           <string>Regenerate</string>
+           <string>再生</string>
           </property>
          </widget>
         </item>
         <item row="3" column="0">
          <widget class="QCheckBox" name="custom_rtc_checkbox">
           <property name="text">
-           <string>Custom RTC</string>
+           <string>定制 RTC</string>
           </property>
          </widget>
         </item>
@@ -238,7 +238,7 @@
      <item>
       <widget class="QLabel" name="label_disable_info">
        <property name="text">
-        <string>System settings are available only when game is not running.</string>
+        <string>系统设置只有当游戏没有运行.</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

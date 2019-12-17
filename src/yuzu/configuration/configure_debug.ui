@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>474</height>
+    <height>467</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@
           <item>
            <widget class="QCheckBox" name="toggle_gdbstub">
             <property name="text">
-             <string>Enable GDB Stub</string>
+             <string>启用 GDB 存根</string>
             </property>
            </widget>
           </item>
@@ -47,7 +47,7 @@
           <item>
            <widget class="QLabel" name="label_1">
             <property name="text">
-             <string>Port:</string>
+             <string>移植:</string>
             </property>
            </widget>
           </item>
@@ -68,7 +68,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>Logging</string>
+      <string>记录</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
@@ -76,7 +76,7 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Global Log Filter</string>
+           <string>全球日志过滤器</string>
           </property>
          </widget>
         </item>
@@ -90,23 +90,97 @@
         <item>
          <widget class="QCheckBox" name="toggle_console">
           <property name="text">
-           <string>Show Log Console (Windows Only)</string>
+           <string>显示日志控制台 (仅Windows)</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QPushButton" name="open_log_button">
           <property name="text">
-           <string>Open Log Location</string>
+           <string>打开日志位置</string>
           </property>
          </widget>
         </item>
        </layout>
       </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>自制</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>参数字符串</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="homebrew_args_edit"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>图形</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QCheckBox" name="enable_graphics_debugging">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="whatsThis">
+         <string>选中时，图形API在较慢的调试模式进入</string>
+        </property>
+        <property name="text">
+         <string>启用图形调试</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="title">
+      <string>转储</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QCheckBox" name="dump_decompressed_nso">
+        <property name="whatsThis">
+         <string>选中时，任何 NSO yuzu尝试加载或修补程序都将被复制到解压缩到 yuzu/转储 目录.</string>
+        </property>
+        <property name="text">
+         <string>转储 解压 NSOs</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dump_exefs">
+        <property name="whatsThis">
+         <string>勾选后，任何游戏，yuzu负载将有其ExeFS转储到 yuzu/转储 目录.</string>
+        </property>
+        <property name="text">
+         <string>转储 ExeFS</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QCheckBox" name="reporting_services">
         <property name="text">
-         <string>Enable Verbose Reporting Services</string>
+         <string>启用详细报表服务</string>
         </property>
        </widget>
       </item>
@@ -118,7 +192,7 @@
          </font>
         </property>
         <property name="text">
-         <string>This will be reset automatically when yuzu closes.</string>
+         <string>这将自动复位时 yuzu 关闭.</string>
         </property>
         <property name="indent">
          <number>20</number>
@@ -129,40 +203,17 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_5">
+    <widget class="QGroupBox" name="groupBox_6">
      <property name="title">
-      <string>Advanced</string>
+      <string>高级</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QCheckBox" name="quest_flag">
         <property name="text">
-         <string>Kiosk (Quest) Mode</string>
+         <string>Kiosk (寻找) 模式</string>
         </property>
        </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="groupBox_3">
-     <property name="title">
-      <string>Homebrew</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_5">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>Arguments String</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="homebrew_args_edit"/>
-        </item>
-       </layout>
       </item>
      </layout>
     </widget>
@@ -185,6 +236,19 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>toggle_gdbstub</tabstop>
+  <tabstop>gdbport_spinbox</tabstop>
+  <tabstop>log_filter_edit</tabstop>
+  <tabstop>toggle_console</tabstop>
+  <tabstop>open_log_button</tabstop>
+  <tabstop>homebrew_args_edit</tabstop>
+  <tabstop>enable_graphics_debugging</tabstop>
+  <tabstop>dump_decompressed_nso</tabstop>
+  <tabstop>dump_exefs</tabstop>
+  <tabstop>reporting_services</tabstop>
+  <tabstop>quest_flag</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

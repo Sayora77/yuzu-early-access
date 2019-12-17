@@ -50,11 +50,11 @@
    </property>
    <widget class="QMenu" name="menu_File">
     <property name="title">
-     <string>&amp;File</string>
+     <string>&amp;文件</string>
     </property>
     <widget class="QMenu" name="menu_recent_files">
      <property name="title">
-      <string>Recent Files</string>
+      <string>最近打开</string>
      </property>
     </widget>
     <addaction name="action_Install_File_NAND"/>
@@ -75,7 +75,7 @@
    </widget>
    <widget class="QMenu" name="menu_Emulation">
     <property name="title">
-     <string>&amp;Emulation</string>
+     <string>&amp;仿真</string>
     </property>
     <addaction name="action_Start"/>
     <addaction name="action_Pause"/>
@@ -86,11 +86,11 @@
    </widget>
    <widget class="QMenu" name="menu_View">
     <property name="title">
-     <string>&amp;View</string>
+     <string>&amp;视图</string>
     </property>
     <widget class="QMenu" name="menu_View_Debugging">
      <property name="title">
-      <string>Debugging</string>
+      <string>调试</string>
      </property>
     </widget>
     <addaction name="action_Fullscreen"/>
@@ -102,7 +102,7 @@
    </widget>
    <widget class="QMenu" name="menu_Tools">
     <property name="title">
-     <string>Tools</string>
+     <string>工具</string>
     </property>
     <addaction name="action_Rederive"/>
     <addaction name="separator"/>
@@ -110,7 +110,7 @@
    </widget>
    <widget class="QMenu" name="menu_Help">
     <property name="title">
-     <string>&amp;Help</string>
+     <string>&amp;帮助</string>
     </property>
     <addaction name="action_Report_Compatibility"/>
     <addaction name="separator"/>
@@ -127,22 +127,22 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Install File to NAND...</string>
+    <string>将文件安装到NAND...</string>
    </property>
   </action>
   <action name="action_Load_File">
    <property name="text">
-    <string>Load File...</string>
+    <string>加载文件...</string>
    </property>
   </action>
   <action name="action_Load_Folder">
    <property name="text">
-    <string>Load Folder...</string>
+    <string>加载文件夹...</string>
    </property>
   </action>
   <action name="action_Exit">
    <property name="text">
-    <string>E&amp;xit</string>
+    <string>&amp;关闭</string>
    </property>
   </action>
   <action name="action_Start">
@@ -150,7 +150,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Start</string>
+    <string>&amp;开始</string>
    </property>
   </action>
   <action name="action_Pause">
@@ -158,7 +158,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Pause</string>
+    <string>&amp;暂停</string>
    </property>
   </action>
   <action name="action_Stop">
@@ -166,17 +166,17 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Stop</string>
+    <string>&amp;停止</string>
    </property>
   </action>
   <action name="action_Rederive">
    <property name="text">
-    <string>Reinitialize keys...</string>
+    <string>重新初始化 keys...</string>
    </property>
   </action>
   <action name="action_About">
    <property name="text">
-    <string>About yuzu</string>
+    <string>关于 yuzu</string>
    </property>
   </action>
   <action name="action_Single_Window_Mode">
@@ -184,12 +184,12 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Single Window Mode</string>
+    <string>单窗口模式</string>
    </property>
   </action>
   <action name="action_Configure">
    <property name="text">
-    <string>Configure...</string>
+    <string>配置...</string>
    </property>
   </action>
   <action name="action_Display_Dock_Widget_Headers">
@@ -197,7 +197,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Display Dock Widget Headers</string>
+    <string>显示停靠小部件标题</string>
    </property>
   </action>
   <action name="action_Show_Filter_Bar">
@@ -205,7 +205,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show Filter Bar</string>
+    <string>显示筛选栏</string>
    </property>
   </action>
   <action name="action_Show_Status_Bar">
@@ -213,23 +213,23 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show Status Bar</string>
+    <string>显示状态栏</string>
    </property>
   </action>
   <action name="action_Select_NAND_Directory">
    <property name="text">
-    <string>Select NAND Directory...</string>
+    <string>选择 NAND 目录...</string>
    </property>
    <property name="toolTip">
-    <string>Selects a folder to use as the root of the emulated NAND</string>
+    <string>选择的文件夹为仿真的NAND的根使用</string>
    </property>
   </action>
   <action name="action_Select_SDMC_Directory">
    <property name="text">
-    <string>Select SD Card Directory...</string>
+    <string>选择 SD 卡 目录...</string>
    </property>
    <property name="toolTip">
-    <string>Selects a folder to use as the root of the emulated SD card</string>
+    <string>选择一个文件夹作为模拟的SD卡的根目录使用</string>
    </property>
   </action>
   <action name="action_Fullscreen">
@@ -237,7 +237,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Fullscreen</string>
+    <string>全屏</string>
    </property>
   </action>
   <action name="action_Restart">
@@ -245,7 +245,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Restart</string>
+    <string>重新开始</string>
    </property>
   </action>
   <action name="action_Load_Amiibo">
@@ -253,7 +253,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Load Amiibo...</string>
+    <string>载入 Amiibo...</string>
    </property>
   </action>
   <action name="action_Report_Compatibility">
@@ -261,10 +261,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Report Compatibility</string>
-   </property>
-   <property name="visible">
-    <bool>false</bool>
+    <string>报告兼容性</string>
    </property>
   </action>
   <action name="action_Open_yuzu_Folder">
@@ -277,7 +274,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>Capture Screenshot</string>
+    <string>捕获截图</string>
    </property>
   </action>
  </widget>

@@ -19,13 +19,13 @@
      <item>
       <widget class="QGroupBox" name="groupBoxWebConfig">
        <property name="title">
-        <string>yuzu Web Service</string>
+        <string>yuzu 网络服务</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayoutYuzuWebService">
         <item>
          <widget class="QLabel" name="web_credentials_disclaimer">
           <property name="text">
-           <string>By providing your username and token, you agree to allow yuzu to collect additional usage data, which may include user identifying information.</string>
+           <string>通过提供您的用户名和令牌，你同意让yuzu收集更多的使用数据，其中可能包括用户标识信息.</string>
           </property>
          </widget>
         </item>
@@ -43,14 +43,14 @@
              <enum>Qt::RightToLeft</enum>
             </property>
             <property name="text">
-             <string>Verify</string>
+             <string>校验</string>
             </property>
            </widget>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="web_signup_link">
             <property name="text">
-             <string>Sign up</string>
+             <string>注册</string>
             </property>
            </widget>
           </item>
@@ -60,7 +60,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="label_token">
             <property name="text">
-             <string>Token: </string>
+             <string>令牌: </string>
             </property>
            </widget>
           </item>
@@ -71,7 +71,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="label_username">
             <property name="text">
-             <string>Username: </string>
+             <string>用户名: </string>
             </property>
            </widget>
           </item>
@@ -88,7 +88,7 @@
           <item row="2" column="1">
            <widget class="QLabel" name="web_token_info_link">
             <property name="text">
-             <string>What is my token?</string>
+             <string>什么是我的令牌？</string>
             </property>
            </widget>
           </item>
@@ -113,20 +113,20 @@
      <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>Telemetry</string>
+        <string>遥测</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QCheckBox" name="toggle_telemetry">
           <property name="text">
-           <string>Share anonymous usage data with the yuzu team</string>
+           <string>与yuzu团队分享匿名使用数据</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="telemetry_learn_more">
           <property name="text">
-           <string>Learn more</string>
+           <string>学到更多</string>
           </property>
          </widget>
         </item>
@@ -135,7 +135,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="label_telemetry_id">
             <property name="text">
-             <string>Telemetry ID:</string>
+             <string>遥测 ID:</string>
             </property>
            </widget>
           </item>
@@ -151,7 +151,7 @@
              <enum>Qt::RightToLeft</enum>
             </property>
             <property name="text">
-             <string>Regenerate</string>
+             <string>再生</string>
             </property>
            </widget>
           </item>
@@ -165,13 +165,13 @@
    <item>
      <widget class="QGroupBox" name="discord_group">
       <property name="title">
-       <string>Discord Presence</string>
+       <string>不和谐的存在</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_21">
        <item>
         <widget class="QCheckBox" name="toggle_discordrpc">
          <property name="text">
-          <string>Show Current Game in your Discord Status</string>
+          <string>显示当前游戏中你的不和谐状态</string>
          </property>
         </widget>
        </item>

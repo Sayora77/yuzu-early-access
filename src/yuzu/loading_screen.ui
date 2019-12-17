@@ -81,7 +81,7 @@
 font: 75 20pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
-           <string>Loading Shaders 387 / 1628</string>
+           <string>加载着色器 387 / 1628</string>
           </property>
          </widget>
         </item>
@@ -118,7 +118,7 @@ border-radius: 15px;
            <bool>false</bool>
           </property>
           <property name="format">
-           <string>Loading Shaders %v out of %m</string>
+           <string>加载着色器 %v out of %m</string>
           </property>
          </widget>
         </item>
@@ -132,7 +132,7 @@ border-radius: 15px;
 font: 75 15pt &quot;Arial&quot;;</string>
           </property>
           <property name="text">
-           <string>Estimated Time 5m 4s</string>
+           <string>预计时间 5m 4s</string>
           </property>
          </widget>
         </item>

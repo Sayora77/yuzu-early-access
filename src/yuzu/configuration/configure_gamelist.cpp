@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2016 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -13,18 +17,18 @@
 
 namespace {
 constexpr std::array default_icon_sizes{
-    std::make_pair(0, QT_TR_NOOP("None")),
-    std::make_pair(32, QT_TR_NOOP("Small (32x32)")),
-    std::make_pair(64, QT_TR_NOOP("Standard (64x64)")),
-    std::make_pair(128, QT_TR_NOOP("Large (128x128)")),
-    std::make_pair(256, QT_TR_NOOP("Full Size (256x256)")),
+    std::make_pair(0, QT_TR_NOOP("无")),
+    std::make_pair(32, QT_TR_NOOP("小 (32x32)")),
+    std::make_pair(64, QT_TR_NOOP("标准 (64x64)")),
+    std::make_pair(128, QT_TR_NOOP("大 (128x128)")),
+    std::make_pair(256, QT_TR_NOOP("最大 (256x256)")),
 };
 
 constexpr std::array row_text_names{
-    QT_TR_NOOP("Filename"),
-    QT_TR_NOOP("Filetype"),
-    QT_TR_NOOP("Title ID"),
-    QT_TR_NOOP("Title Name"),
+    QT_TR_NOOP("文件名称"),
+    QT_TR_NOOP("文件类型"),
+    QT_TR_NOOP("标题 ID"),
+    QT_TR_NOOP("标题 名字"),
 };
 } // Anonymous namespace
 

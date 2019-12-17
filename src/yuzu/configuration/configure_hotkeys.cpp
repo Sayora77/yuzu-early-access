@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2017 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -61,7 +65,7 @@ void ConfigureHotkeys::changeEvent(QEvent* event) {
 void ConfigureHotkeys::RetranslateUI() {
     ui->retranslateUi(this);
 
-    model->setHorizontalHeaderLabels({tr("Action"), tr("Hotkey"), tr("Context")});
+    model->setHorizontalHeaderLabels({tr("行动"), tr("热键"), tr("环境")});
 }
 
 void ConfigureHotkeys::Configure(QModelIndex index) {
@@ -82,8 +86,8 @@ void ConfigureHotkeys::Configure(QModelIndex index) {
     }
 
     if (IsUsedKey(key_sequence) && key_sequence != QKeySequence(previous_key.toString())) {
-        QMessageBox::warning(this, tr("Conflicting Key Sequence"),
-                             tr("The entered key sequence is already assigned to another hotkey."));
+        QMessageBox::warning(this, tr("冲突的按键顺序"),
+                             tr("输入的按键顺序已经分配给另一个热键."));
     } else {
         model->setData(index, key_sequence.toString(QKeySequence::NativeText));
     }

@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2015 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -137,13 +141,13 @@ public:
         };
         // clang-format off
         static const std::map<QString, CompatStatus> status_data = {
-            {QStringLiteral("0"),  {QStringLiteral("#5c93ed"), QT_TR_NOOP("Perfect"),    QT_TR_NOOP("Game functions flawless with no audio or graphical glitches, all tested functionality works as intended without\nany workarounds needed.")}},
-            {QStringLiteral("1"),  {QStringLiteral("#47d35c"), QT_TR_NOOP("Great"),      QT_TR_NOOP("Game functions with minor graphical or audio glitches and is playable from start to finish. May require some\nworkarounds.")}},
-            {QStringLiteral("2"),  {QStringLiteral("#94b242"), QT_TR_NOOP("Okay"),       QT_TR_NOOP("Game functions with major graphical or audio glitches, but game is playable from start to finish with\nworkarounds.")}},
-            {QStringLiteral("3"),  {QStringLiteral("#f2d624"), QT_TR_NOOP("Bad"),        QT_TR_NOOP("Game functions, but with major graphical or audio glitches. Unable to progress in specific areas due to glitches\neven with workarounds.")}},
-            {QStringLiteral("4"),  {QStringLiteral("#FF0000"), QT_TR_NOOP("Intro/Menu"), QT_TR_NOOP("Game is completely unplayable due to major graphical or audio glitches. Unable to progress past the Start\nScreen.")}},
-            {QStringLiteral("5"),  {QStringLiteral("#828282"), QT_TR_NOOP("Won't Boot"), QT_TR_NOOP("The game crashes when attempting to startup.")}},
-            {QStringLiteral("99"), {QStringLiteral("#000000"), QT_TR_NOOP("Not Tested"), QT_TR_NOOP("The game has not yet been tested.")}},
+            {QStringLiteral("0"),  {QStringLiteral("#5c93ed"), QT_TR_NOOP("完美"),    QT_TR_NOOP("游戏功能无措，没有音频或故障的图形，所有测试功能按预期正常运行，而不\n任何变通办法需要.")}},
+            {QStringLiteral("1"),  {QStringLiteral("#47d35c"), QT_TR_NOOP("很好"),      QT_TR_NOOP("轻微的图形或音频故障的游戏功能，可播放从开始到结束，可能需要一些\n解决方法.")}},
+            {QStringLiteral("2"),  {QStringLiteral("#94b242"), QT_TR_NOOP("好的"),       QT_TR_NOOP("与主要的图形或音频故障，但游戏游戏功能，可玩从开始到完成用\n解决方法.")}},
+            {QStringLiteral("3"),  {QStringLiteral("#f2d624"), QT_TR_NOOP("坏"),        QT_TR_NOOP("游戏功能，但主要的图形或音频故障，无法在因故障的具体领域取得的进展\n即使有解决办法.")}},
+            {QStringLiteral("4"),  {QStringLiteral("#FF0000"), QT_TR_NOOP("简介/菜单"), QT_TR_NOOP("游戏是完全无法播放，由于主要的图形或音频故障，过去无法在开始进展\n屏幕.")}},
+            {QStringLiteral("5"),  {QStringLiteral("#828282"), QT_TR_NOOP("无法启动"), QT_TR_NOOP("尝试启动游戏时崩溃.")}},
+            {QStringLiteral("99"), {QStringLiteral("#000000"), QT_TR_NOOP("未测试"), QT_TR_NOOP("游戏尚未测试.")}},
         };
         // clang-format on
 
@@ -229,7 +233,7 @@ public:
                     .pixmap(icon_size)
                     .scaled(icon_size, icon_size, Qt::IgnoreAspectRatio, Qt::SmoothTransformation),
                 Qt::DecorationRole);
-            setData(QObject::tr("Installed SD Titles"), Qt::DisplayRole);
+            setData(QObject::tr("安装 SD 标题"), Qt::DisplayRole);
             break;
         case GameListItemType::UserNandDir:
             setData(
@@ -237,7 +241,7 @@ public:
                     .pixmap(icon_size)
                     .scaled(icon_size, icon_size, Qt::IgnoreAspectRatio, Qt::SmoothTransformation),
                 Qt::DecorationRole);
-            setData(QObject::tr("Installed NAND Titles"), Qt::DisplayRole);
+            setData(QObject::tr("安装 NAND 标题"), Qt::DisplayRole);
             break;
         case GameListItemType::SysNandDir:
             setData(
@@ -245,7 +249,7 @@ public:
                     .pixmap(icon_size)
                     .scaled(icon_size, icon_size, Qt::IgnoreAspectRatio, Qt::SmoothTransformation),
                 Qt::DecorationRole);
-            setData(QObject::tr("System Titles"), Qt::DisplayRole);
+            setData(QObject::tr("系统标题"), Qt::DisplayRole);
             break;
         case GameListItemType::CustomDir: {
             const QString icon_name = QFileInfo::exists(game_dir->path)
@@ -280,7 +284,7 @@ public:
                     .pixmap(icon_size)
                     .scaled(icon_size, icon_size, Qt::IgnoreAspectRatio, Qt::SmoothTransformation),
                 Qt::DecorationRole);
-        setData(QObject::tr("Add New Game Directory"), Qt::DisplayRole);
+        setData(QObject::tr("添加新的游戏目录"), Qt::DisplayRole);
     }
 
     int type() const override {

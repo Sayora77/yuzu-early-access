@@ -31,7 +31,7 @@
            </size>
           </property>
           <property name="text">
-           <string>BCAT is Nintendo's way of sending data to games to engage its community and unlock additional content.</string>
+           <string>BCAT 是任天堂的将数据发送到游戏参与其社会和解锁额外的内容的方式.</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -47,7 +47,7 @@
            </size>
           </property>
           <property name="text">
-           <string>BCAT Backend</string>
+           <string>BCAT 后端</string>
           </property>
          </widget>
         </item>
@@ -76,7 +76,7 @@
         <item row="2" column="1" colspan="2">
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://yuzu-emu.org/help/feature/boxcat&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Learn more about BCAT, Boxcat, and Current Events&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://yuzu-emu.org/help/feature/boxcat&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;了解更多关于BCAT，Boxcat和时事&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="openExternalLinks">
            <bool>true</bool>

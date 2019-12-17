@@ -14,7 +14,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Audio</string>
+      <string>音频</string>
      </property>
      <layout class="QVBoxLayout">
       <item>
@@ -22,7 +22,7 @@
         <item>
          <widget class="QLabel" name="label_1">
           <property name="text">
-           <string>Output Engine:</string>
+           <string>输出引擎:</string>
           </property>
          </widget>
         </item>
@@ -34,10 +34,10 @@
        <item>
          <widget class="QCheckBox" name="toggle_audio_stretching">
            <property name="toolTip">
-             <string>This post-processing effect adjusts audio speed to match emulation speed and helps prevent audio stutter. This however increases audio latency.</string>
+             <string>这种后处理效果的音频调节速度相匹配的仿真速度，并有助于防止音频卡顿。然而，这增加了音频延迟.</string>
            </property>
            <property name="text">
-             <string>Enable audio stretching</string>
+             <string>启用音频拉伸</string>
            </property>
          </widget>
        </item>
@@ -46,7 +46,7 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Audio Device:</string>
+           <string>音频设备:</string>
           </property>
          </widget>
         </item>
@@ -63,7 +63,7 @@
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>Volume:</string>
+           <string>体积:</string>
           </property>
          </widget>
         </item>

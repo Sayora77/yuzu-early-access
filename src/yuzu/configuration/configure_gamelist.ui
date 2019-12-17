@@ -19,7 +19,7 @@
      <item>
       <widget class="QGroupBox" name="GeneralGroupBox">
        <property name="title">
-        <string>General</string>
+        <string>常规</string>
        </property>
        <layout class="QHBoxLayout" name="GeneralHorizontalLayout">
         <item>
@@ -27,14 +27,14 @@
           <item>
            <widget class="QCheckBox" name="show_unknown">
             <property name="text">
-             <string>Show files with type 'Unknown'</string>
+             <string>显示有型 '未知文件'</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="show_add_ons">
             <property name="text">
-             <string>Show Add-Ons Column</string>
+             <string>展会附加组件列</string>
             </property>
            </widget>
           </item>
@@ -46,7 +46,7 @@
      <item>
       <widget class="QGroupBox" name="IconSizeGroupBox">
        <property name="title">
-        <string>Icon Size</string>
+        <string>图标大小</string>
        </property>
        <layout class="QHBoxLayout" name="icon_size_qhbox_layout">
         <item>
@@ -56,7 +56,7 @@
             <item>
              <widget class="QLabel" name="icon_size_label">
               <property name="text">
-               <string>Icon Size:</string>
+               <string>图标大小:</string>
               </property>
              </widget>
             </item>
@@ -73,7 +73,7 @@
      <item>
       <widget class="QGroupBox" name="RowGroupBox">
        <property name="title">
-        <string>Row Text</string>
+        <string>Row 文本</string>
        </property>
        <layout class="QHBoxLayout" name="RowHorizontalLayout">
         <item>
@@ -83,7 +83,7 @@
             <item>
              <widget class="QLabel" name="row_1_label">
               <property name="text">
-               <string>Row 1 Text:</string>
+               <string>Row 1 文本:</string>
               </property>
              </widget>
             </item>
@@ -97,7 +97,7 @@
             <item>
              <widget class="QLabel" name="row_2_label">
               <property name="text">
-               <string>Row 2 Text:</string>
+               <string>Row 2 文本:</string>
               </property>
              </widget>
             </item>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Custom Input Settings</string>
+   <string>自定义输入法设置</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
@@ -19,7 +19,7 @@
      <item>
       <widget class="QGroupBox" name="gridGroupBox_1">
        <property name="title">
-        <string>Players</string>
+        <string>玩家</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="1" column="2">
@@ -35,14 +35,14 @@
         <item row="1" column="3">
          <widget class="QPushButton" name="player1_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="0" column="2">
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Controller Type</string>
+           <string>控制器类型</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -122,49 +122,49 @@
         <item row="2" column="3">
          <widget class="QPushButton" name="player2_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="3" column="3">
          <widget class="QPushButton" name="player3_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="4" column="3">
          <widget class="QPushButton" name="player4_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="5" column="3">
          <widget class="QPushButton" name="player5_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="6" column="3">
          <widget class="QPushButton" name="player6_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="7" column="3">
          <widget class="QPushButton" name="player7_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="8" column="3">
          <widget class="QPushButton" name="player8_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
@@ -203,56 +203,56 @@
            </size>
           </property>
           <property name="text">
-           <string>Player 1</string>
+           <string>玩家 1</string>
           </property>
          </widget>
         </item>
         <item row="2" column="1">
          <widget class="QLabel" name="label_4">
           <property name="text">
-           <string>Player 2</string>
+           <string>玩家 2</string>
           </property>
          </widget>
         </item>
         <item row="3" column="1">
          <widget class="QLabel" name="label_5">
           <property name="text">
-           <string>Player 3</string>
+           <string>玩家 3</string>
           </property>
          </widget>
         </item>
         <item row="4" column="1">
          <widget class="QLabel" name="label_6">
           <property name="text">
-           <string>Player 4</string>
+           <string>玩家 4</string>
           </property>
          </widget>
         </item>
         <item row="5" column="1">
          <widget class="QLabel" name="label_7">
           <property name="text">
-           <string>Player 5</string>
+           <string>玩家 5</string>
           </property>
          </widget>
         </item>
         <item row="6" column="1">
          <widget class="QLabel" name="label_8">
           <property name="text">
-           <string>Player 6</string>
+           <string>玩家 6</string>
           </property>
          </widget>
         </item>
         <item row="7" column="1">
          <widget class="QLabel" name="label_9">
           <property name="text">
-           <string>Player 7</string>
+           <string>玩家 7</string>
           </property>
          </widget>
         </item>
         <item row="8" column="1">
          <widget class="QLabel" name="label_10">
           <property name="text">
-           <string>Player 8</string>
+           <string>玩家 8</string>
           </property>
          </widget>
         </item>
@@ -262,7 +262,7 @@
      <item>
       <widget class="QGroupBox" name="gridGroupBox_2">
        <property name="title">
-        <string>Handheld</string>
+        <string>手持式</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="1" column="2">
@@ -297,7 +297,7 @@
         <item row="1" column="3">
          <widget class="QPushButton" name="handheld_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
@@ -324,7 +324,7 @@
         <item row="0" column="1">
          <widget class="QCheckBox" name="use_docked_mode">
           <property name="text">
-           <string>Use Docked Mode</string>
+           <string>使用 Docked 模式</string>
           </property>
          </widget>
         </item>
@@ -334,7 +334,7 @@
      <item>
       <widget class="QGroupBox" name="gridGroupBox_3">
        <property name="title">
-        <string>Other</string>
+        <string>其他</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="1" column="1">
@@ -346,21 +346,21 @@
            </size>
           </property>
           <property name="text">
-           <string>Keyboard</string>
+           <string>键盘</string>
           </property>
          </widget>
         </item>
         <item row="2" column="1">
          <widget class="QCheckBox" name="debug_enabled">
           <property name="text">
-           <string>Debug Controller</string>
+           <string>调试控制器</string>
           </property>
          </widget>
         </item>
         <item row="3" column="1">
          <widget class="QCheckBox" name="touchscreen_enabled">
           <property name="text">
-           <string>Touchscreen</string>
+           <string>触摸屏</string>
           </property>
          </widget>
         </item>
@@ -373,7 +373,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Mouse</string>
+           <string>鼠标</string>
           </property>
          </widget>
         </item>
@@ -422,21 +422,21 @@
         <item row="3" column="3">
          <widget class="QPushButton" name="touchscreen_advanced">
           <property name="text">
-           <string>Advanced</string>
+           <string>高级</string>
           </property>
          </widget>
         </item>
         <item row="2" column="3">
          <widget class="QPushButton" name="debug_configure">
           <property name="text">
-           <string>Configure</string>
+           <string>配置</string>
           </property>
          </widget>
         </item>
         <item row="0" column="3">
          <widget class="QPushButton" name="mouse_advanced">
           <property name="text">
-           <string>Advanced</string>
+           <string>高级</string>
           </property>
          </widget>
         </item>
@@ -461,7 +461,7 @@
        <item>
         <widget class="QPushButton" name="restore_defaults_button">
          <property name="text">
-          <string>Restore Defaults</string>
+          <string>恢复默认值</string>
          </property>
         </widget>
        </item>

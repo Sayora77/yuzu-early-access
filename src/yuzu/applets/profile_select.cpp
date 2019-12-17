@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2018 yuzu Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -46,7 +50,7 @@ QtProfileSelectionDialog::QtProfileSelectionDialog(QWidget* parent)
     : QDialog(parent), profile_manager(std::make_unique<Service::Account::ProfileManager>()) {
     outer_layout = new QVBoxLayout;
 
-    instruction_label = new QLabel(tr("Select a user:"));
+    instruction_label = new QLabel(tr("选择一个用户:"));
 
     scroll_area = new QScrollArea;
 
@@ -75,7 +79,7 @@ QtProfileSelectionDialog::QtProfileSelectionDialog(QWidget* parent)
     tree_view->setContextMenuPolicy(Qt::NoContextMenu);
 
     item_model->insertColumns(0, 1);
-    item_model->setHeaderData(0, Qt::Horizontal, tr("Users"));
+    item_model->setHeaderData(0, Qt::Horizontal, tr("用户"));
 
     // We must register all custom types with the Qt Automoc system so that we are able to use it
     // with signals/slots. In this case, QList falls under the umbrella of custom types.
@@ -106,7 +110,7 @@ QtProfileSelectionDialog::QtProfileSelectionDialog(QWidget* parent)
         item_model->appendRow(item);
 
     setLayout(outer_layout);
-    setWindowTitle(tr("Profile Selector"));
+    setWindowTitle(tr("配置文件选择器"));
     resize(550, 400);
 }
 

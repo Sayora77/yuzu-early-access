@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2014 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -117,28 +121,28 @@ void BreakPointModel::OnResumed() {
 QString BreakPointModel::DebugContextEventToString(Tegra::DebugContext::Event event) {
     switch (event) {
     case Tegra::DebugContext::Event::MaxwellCommandLoaded:
-        return tr("Maxwell command loaded");
+        return tr("Maxwell 命令加载");
     case Tegra::DebugContext::Event::MaxwellCommandProcessed:
-        return tr("Maxwell command processed");
+        return tr("Maxwell 命令处理");
     case Tegra::DebugContext::Event::IncomingPrimitiveBatch:
-        return tr("Incoming primitive batch");
+        return tr("传入原始的批处理");
     case Tegra::DebugContext::Event::FinishedPrimitiveBatch:
-        return tr("Finished primitive batch");
+        return tr("成品原始的批处理");
     case Tegra::DebugContext::Event::NumEvents:
         break;
     }
 
-    return tr("Unknown debug context event");
+    return tr("未知的调试环境事件");
 }
 
 GraphicsBreakPointsWidget::GraphicsBreakPointsWidget(
     std::shared_ptr<Tegra::DebugContext> debug_context, QWidget* parent)
-    : QDockWidget(tr("Maxwell Breakpoints"), parent), Tegra::DebugContext::BreakPointObserver(
+    : QDockWidget(tr("Maxwell 断点"), parent), Tegra::DebugContext::BreakPointObserver(
                                                           debug_context) {
     setObjectName(QStringLiteral("TegraBreakPointsWidget"));
 
-    status_text = new QLabel(tr("Emulation running"));
-    resume_button = new QPushButton(tr("Resume"));
+    status_text = new QLabel(tr("模拟运行"));
+    resume_button = new QPushButton(tr("恢复"));
     resume_button->setEnabled(false);
 
     breakpoint_model = new BreakPointModel(debug_context, this);
@@ -189,7 +193,7 @@ void GraphicsBreakPointsWidget::OnMaxwellBreakPointHit(Event event, void* data) 
 }
 
 void GraphicsBreakPointsWidget::OnBreakPointHit(Tegra::DebugContext::Event event, void* data) {
-    status_text->setText(tr("Emulation halted at breakpoint"));
+    status_text->setText(tr("仿真停在断点"));
     resume_button->setEnabled(true);
 }
 
@@ -199,7 +203,7 @@ void GraphicsBreakPointsWidget::OnMaxwellResume() {
 }
 
 void GraphicsBreakPointsWidget::OnResumed() {
-    status_text->setText(tr("Emulation running"));
+    status_text->setText(tr("仿真运行"));
     resume_button->setEnabled(false);
 }
 

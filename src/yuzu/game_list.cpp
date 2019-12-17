@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2015 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -80,7 +84,7 @@ void GameListSearchField::setFilterResult(int visible, int total) {
     this->visible = visible;
     this->total = total;
 
-    label_filter_result->setText(tr("%1 of %n result(s)", "", total).arg(visible));
+    label_filter_result->setText(tr("%1 of %n 结果(s)", "", total).arg(visible));
 }
 
 QString GameList::getLastFilterResultItem() const {
@@ -117,10 +121,10 @@ GameListSearchField::GameListSearchField(GameList* parent) : QWidget{parent} {
     layout_filter = new QHBoxLayout;
     layout_filter->setMargin(8);
     label_filter = new QLabel;
-    label_filter->setText(tr("Filter:"));
+    label_filter->setText(tr("过滤:"));
     edit_filter = new QLineEdit;
     edit_filter->clear();
-    edit_filter->setPlaceholderText(tr("Enter pattern to filter"));
+    edit_filter->setPlaceholderText(tr("输入模式过滤器"));
     edit_filter->installEventFilter(key_release_eater);
     edit_filter->setClearButtonEnabled(true);
     connect(edit_filter, &QLineEdit::textChanged, parent, &GameList::onTextChanged);
@@ -304,16 +308,16 @@ GameList::GameList(FileSys::VirtualFilesystem vfs, FileSys::ManualContentProvide
     tree_view->setStyleSheet(QStringLiteral("QTreeView{ border: none; }"));
 
     item_model->insertColumns(0, UISettings::values.show_add_ons ? COLUMN_COUNT : COLUMN_COUNT - 1);
-    item_model->setHeaderData(COLUMN_NAME, Qt::Horizontal, tr("Name"));
-    item_model->setHeaderData(COLUMN_COMPATIBILITY, Qt::Horizontal, tr("Compatibility"));
+    item_model->setHeaderData(COLUMN_NAME, Qt::Horizontal, tr("名称"));
+    item_model->setHeaderData(COLUMN_COMPATIBILITY, Qt::Horizontal, tr("兼容性"));
 
     if (UISettings::values.show_add_ons) {
-        item_model->setHeaderData(COLUMN_ADD_ONS, Qt::Horizontal, tr("Add-ons"));
-        item_model->setHeaderData(COLUMN_FILE_TYPE, Qt::Horizontal, tr("File type"));
-        item_model->setHeaderData(COLUMN_SIZE, Qt::Horizontal, tr("Size"));
+        item_model->setHeaderData(COLUMN_ADD_ONS, Qt::Horizontal, tr("插件"));
+        item_model->setHeaderData(COLUMN_FILE_TYPE, Qt::Horizontal, tr("文件类型"));
+        item_model->setHeaderData(COLUMN_SIZE, Qt::Horizontal, tr("大小"));
     } else {
-        item_model->setHeaderData(COLUMN_FILE_TYPE - 1, Qt::Horizontal, tr("File type"));
-        item_model->setHeaderData(COLUMN_SIZE - 1, Qt::Horizontal, tr("Size"));
+        item_model->setHeaderData(COLUMN_FILE_TYPE - 1, Qt::Horizontal, tr("文件类型"));
+        item_model->setHeaderData(COLUMN_SIZE - 1, Qt::Horizontal, tr("大小"));
     }
     item_model->setSortRole(GameListItemPath::TitleRole);
 
@@ -471,16 +475,16 @@ void GameList::PopupContextMenu(const QPoint& menu_location) {
 }
 
 void GameList::AddGamePopup(QMenu& context_menu, u64 program_id, std::string path) {
-    QAction* open_save_location = context_menu.addAction(tr("Open Save Data Location"));
-    QAction* open_lfs_location = context_menu.addAction(tr("Open Mod Data Location"));
+    QAction* open_save_location = context_menu.addAction(tr("打开保存数据位置"));
+    QAction* open_lfs_location = context_menu.addAction(tr("打开 MOD 数据位置"));
     QAction* open_transferable_shader_cache =
-        context_menu.addAction(tr("Open Transferable Shader Cache"));
+        context_menu.addAction(tr("打开可转让着色器缓存"));
     context_menu.addSeparator();
-    QAction* dump_romfs = context_menu.addAction(tr("Dump RomFS"));
-    QAction* copy_tid = context_menu.addAction(tr("Copy Title ID to Clipboard"));
-    QAction* navigate_to_gamedb_entry = context_menu.addAction(tr("Navigate to GameDB entry"));
+    QAction* dump_romfs = context_menu.addAction(tr("提取 RomFS"));
+    QAction* copy_tid = context_menu.addAction(tr("复制标题ID到剪贴板"));
+    QAction* navigate_to_gamedb_entry = context_menu.addAction(tr("导航到游戏 DB 条目"));
     context_menu.addSeparator();
-    QAction* properties = context_menu.addAction(tr("Properties"));
+    QAction* properties = context_menu.addAction(tr("属性"));
 
     open_save_location->setEnabled(program_id != 0);
     auto it = FindMatchingCompatibilityEntry(compatibility_list, program_id);
@@ -509,8 +513,8 @@ void GameList::AddCustomDirPopup(QMenu& context_menu, QModelIndex selected) {
     UISettings::GameDir& game_dir =
         *selected.data(GameListDir::GameDirRole).value<UISettings::GameDir*>();
 
-    QAction* deep_scan = context_menu.addAction(tr("Scan Subfolders"));
-    QAction* delete_dir = context_menu.addAction(tr("Remove Game Directory"));
+    QAction* deep_scan = context_menu.addAction(tr("扫描子文件夹"));
+    QAction* delete_dir = context_menu.addAction(tr("删除游戏目录"));
 
     deep_scan->setCheckable(true);
     deep_scan->setChecked(game_dir.deep_scan);
@@ -531,7 +535,7 @@ void GameList::AddPermDirPopup(QMenu& context_menu, QModelIndex selected) {
 
     QAction* move_up = context_menu.addAction(tr(u8"\U000025b2 Move Up"));
     QAction* move_down = context_menu.addAction(tr(u8"\U000025bc Move Down "));
-    QAction* open_directory_location = context_menu.addAction(tr("Open Directory Location"));
+    QAction* open_directory_location = context_menu.addAction(tr("打开目录位置"));
 
     const int row = selected.row();
 
@@ -618,16 +622,16 @@ void GameList::PopulateAsync(QVector<UISettings::GameDir>& game_dirs) {
     // Update the columns in case UISettings has changed
     item_model->removeColumns(0, item_model->columnCount());
     item_model->insertColumns(0, UISettings::values.show_add_ons ? COLUMN_COUNT : COLUMN_COUNT - 1);
-    item_model->setHeaderData(COLUMN_NAME, Qt::Horizontal, tr("Name"));
-    item_model->setHeaderData(COLUMN_COMPATIBILITY, Qt::Horizontal, tr("Compatibility"));
+    item_model->setHeaderData(COLUMN_NAME, Qt::Horizontal, tr("名称"));
+    item_model->setHeaderData(COLUMN_COMPATIBILITY, Qt::Horizontal, tr("兼容性"));
 
     if (UISettings::values.show_add_ons) {
-        item_model->setHeaderData(COLUMN_ADD_ONS, Qt::Horizontal, tr("Add-ons"));
-        item_model->setHeaderData(COLUMN_FILE_TYPE, Qt::Horizontal, tr("File type"));
-        item_model->setHeaderData(COLUMN_SIZE, Qt::Horizontal, tr("Size"));
+        item_model->setHeaderData(COLUMN_ADD_ONS, Qt::Horizontal, tr("插件"));
+        item_model->setHeaderData(COLUMN_FILE_TYPE, Qt::Horizontal, tr("文件类型"));
+        item_model->setHeaderData(COLUMN_SIZE, Qt::Horizontal, tr("大小"));
     } else {
-        item_model->setHeaderData(COLUMN_FILE_TYPE - 1, Qt::Horizontal, tr("File type"));
-        item_model->setHeaderData(COLUMN_SIZE - 1, Qt::Horizontal, tr("Size"));
+        item_model->setHeaderData(COLUMN_FILE_TYPE - 1, Qt::Horizontal, tr("文件类型"));
+        item_model->setHeaderData(COLUMN_SIZE - 1, Qt::Horizontal, tr("大小"));
         item_model->removeColumns(COLUMN_COUNT - 1, 1);
     }
 
@@ -691,7 +695,7 @@ GameListPlaceholder::GameListPlaceholder(GMainWindow* parent) : QWidget{parent} 
     layout->setAlignment(Qt::AlignCenter);
     image->setPixmap(QIcon::fromTheme(QStringLiteral("plus_folder")).pixmap(200));
 
-    text->setText(tr("Double-click to add a new folder to the game list"));
+    text->setText(tr("双击一个新的文件夹添加到游戏列表"));
     QFont font = text->font();
     font.setPointSize(20);
     text->setFont(font);

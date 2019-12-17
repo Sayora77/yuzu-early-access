@@ -19,7 +19,7 @@
      <item>
       <widget class="QGroupBox" name="gridGroupBox">
        <property name="title">
-        <string>Profile Manager</string>
+        <string>配置文件管理器</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <property name="sizeConstraint">
@@ -36,7 +36,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>Current User</string>
+             <string>当前用户</string>
             </property>
            </widget>
           </item>
@@ -74,7 +74,7 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>Username</string>
+             <string>用户名</string>
             </property>
            </widget>
           </item>
@@ -104,7 +104,7 @@
              <bool>false</bool>
             </property>
             <property name="text">
-             <string>Set Image</string>
+             <string>设置图片</string>
             </property>
            </widget>
           </item>
@@ -124,7 +124,7 @@
           <item>
            <widget class="QPushButton" name="pm_add">
             <property name="text">
-             <string>Add</string>
+             <string>添加</string>
             </property>
            </widget>
           </item>
@@ -134,7 +134,7 @@
              <bool>false</bool>
             </property>
             <property name="text">
-             <string>Rename</string>
+             <string>改名</string>
             </property>
            </widget>
           </item>
@@ -144,7 +144,7 @@
              <bool>false</bool>
             </property>
             <property name="text">
-             <string>Remove</string>
+             <string>去掉</string>
             </property>
            </widget>
           </item>
@@ -156,7 +156,7 @@
      <item>
       <widget class="QLabel" name="label_disable_info">
        <property name="text">
-        <string>Profile management is available only when game is not running.</string>
+        <string>档案管理只适用于当游戏没有运行.</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

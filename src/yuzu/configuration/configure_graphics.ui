@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,45 +17,93 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>API 设置</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>API:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="api">
+            <item>
+             <property name="text">
+              <string notr="true">OpenGL</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">Vulkan</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>设备:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="device"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>Graphics</string>
+        <string>图形设置</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QCheckBox" name="use_disk_shader_cache">
           <property name="text">
-           <string>Use disk shader cache</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QCheckBox" name="use_accurate_gpu_emulation">
-          <property name="text">
-           <string>Use accurate GPU emulation (slow)</string>
+           <string>使用磁盘高速缓存着色器</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QCheckBox" name="use_asynchronous_gpu_emulation">
           <property name="text">
-           <string>Use asynchronous GPU emulation</string>
+           <string>使用异步GPU仿真</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="use_accurate_gpu_emulation">
+          <property name="text">
+           <string>使用精确的GPU仿真（慢）</string>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QCheckBox" name="force_30fps_mode">
           <property name="text">
-           <string>Force 30 FPS mode</string>
+           <string>强制 30 FPS模式</string>
           </property>
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>Internal Resolution</string>
+             <string>内部分辨率:</string>
             </property>
            </widget>
           </item>
@@ -91,11 +139,11 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QLabel" name="bg_label">
             <property name="text">
-             <string>Background Color:</string>
+             <string>背景颜色:</string>
             </property>
            </widget>
           </item>

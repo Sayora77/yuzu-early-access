@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include <utility>
+
 #include "common/alignment.h"
 #include "common/bit_util.h"
 #include "common/cityhash.h"
@@ -136,6 +138,15 @@ public:
 
     std::size_t GetConvertedMipmapSize(u32 level) const;
 
+    /// Get this texture Tegra Block size in guest memory layout
+    u32 GetBlockSize() const;
+
+    /// Get X, Y sizes of a block
+    std::pair<u32, u32> GetBlockXY() const;
+
+    /// Get the offset in x, y, z coordinates from a memory offset
+    std::tuple<u32, u32, u32> GetBlockOffsetXYZ(u32 offset) const;
+
     /// Returns the size of a layer in bytes in guest memory.
     std::size_t GetGuestLayerSize() const {
         return GetLayerSize(false, false);
@@ -196,6 +207,11 @@ public:
     /// Returns is the surface is a TextureBuffer type of surface.
     bool IsBuffer() const {
         return target == VideoCore::Surface::SurfaceTarget::TextureBuffer;
+    }
+
+    /// Returns the number of layers in the surface.
+    std::size_t GetNumLayers() const {
+        return is_layered ? depth : 1;
     }
 
     /// Returns the debug name of the texture for use in graphic debuggers.
@@ -269,15 +285,12 @@ private:
 
     /// Returns the size of all mipmap levels and aligns as needed.
     std::size_t GetInnerMemorySize(bool as_host_size, bool layer_only, bool uncompressed) const {
-        return GetLayerSize(as_host_size, uncompressed) * (layer_only ? 1U : depth);
+        return GetLayerSize(as_host_size, uncompressed) *
+               (layer_only ? 1U : (is_layered ? depth : 1U));
     }
 
     /// Returns the size of a layer
     std::size_t GetLayerSize(bool as_host_size, bool uncompressed) const;
-
-    std::size_t GetNumLayers() const {
-        return is_layered ? depth : 1;
-    }
 
     /// Returns true if these parameters are from a layered surface.
     bool IsLayered() const;

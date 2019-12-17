@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2016 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -31,7 +35,7 @@ ConfigurePerGameGeneral::ConfigurePerGameGeneral(QWidget* parent, u64 title_id)
 
     ui->setupUi(this);
     setFocusPolicy(Qt::ClickFocus);
-    setWindowTitle(tr("Properties"));
+    setWindowTitle(tr("属性"));
 
     layout = new QVBoxLayout;
     tree_view = new QTreeView;
@@ -48,8 +52,8 @@ ConfigurePerGameGeneral::ConfigurePerGameGeneral(QWidget* parent, u64 title_id)
     tree_view->setContextMenuPolicy(Qt::NoContextMenu);
 
     item_model->insertColumns(0, 2);
-    item_model->setHeaderData(0, Qt::Horizontal, tr("Patch Name"));
-    item_model->setHeaderData(1, Qt::Horizontal, tr("Version"));
+    item_model->setHeaderData(0, Qt::Horizontal, tr("补丁名称"));
+    item_model->setHeaderData(1, Qt::Horizontal, tr("版本"));
 
     // We must register all custom types with the Qt Automoc system so that we are able to use it
     // with signals/slots. In this case, QList falls under the umbrells of custom types.

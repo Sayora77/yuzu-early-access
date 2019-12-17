@@ -1,3 +1,7 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+
 // Copyright 2017 Citra Emulator Project
 // Licensed under GPLv2 or any later version
 // Refer to the license.txt file included.
@@ -57,7 +61,7 @@ void CompatDB::Submit() {
             Telemetry::FieldType::UserFeedback, "Compatibility", compatibility->checkedId());
 
         button(NextButton)->setEnabled(false);
-        button(NextButton)->setText(tr("Submitting"));
+        button(NextButton)->setText(tr("提交"));
         button(CancelButton)->setVisible(false);
 
         testcase_watcher.setFuture(QtConcurrent::run(
@@ -70,10 +74,10 @@ void CompatDB::Submit() {
 
 void CompatDB::OnTestcaseSubmitted() {
     if (!testcase_watcher.result()) {
-        QMessageBox::critical(this, tr("Communication error"),
-                              tr("An error occured while sending the Testcase"));
+        QMessageBox::critical(this, tr("通信故障"),
+                              tr("在发送测试用例时出错"));
         button(NextButton)->setEnabled(true);
-        button(NextButton)->setText(tr("Next"));
+        button(NextButton)->setText(tr("下一个"));
         button(CancelButton)->setVisible(true);
     } else {
         next();
