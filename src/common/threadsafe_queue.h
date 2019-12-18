@@ -47,18 +47,15 @@ public:
         write_ptr->next.store(new_ptr, std::memory_order_release);
         write_ptr = new_ptr;
 
-        const size_t previous_size{size};
-        ++size;
+        const size_t previous_size{size++};
 
         // Acquire the mutex and then immediately release it as a fence.
         // TODO(bunnei): This can be replaced with C++20 waitable atomics when properly supported.
         // See discussion on https://github.com/yuzu-emu/yuzu/pull/3173 for details.
         if (previous_size == 0) {
             std::lock_guard lock{cv_mutex};
-            cv.notify_one();
-        } else {
-            cv.notify_one();
         }
+        cv.notify_one();
     }
 
     void Pop() {
